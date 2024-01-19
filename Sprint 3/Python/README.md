@@ -45,49 +45,51 @@ Revisei meus códigos para o envio e ajustei as pastas para subir no Git os arqu
 
 # Anotações
 
-__builtins__ = é um módulo especial que contém funções e tipos incorporados que estão sempre disponíveis globalmente. Não precisa se preocupar em acessar __builtins__ diretamente, pois as funções e tipos incorporados são automaticamente disponíveis no escopo global. 
+'_ _ builtins _ _' = é um módulo especial que contém funções e tipos incorporados que estão sempre disponíveis globalmente. Não precisa se preocupar em acessar __builtins__ diretamente, pois as funções e tipos incorporados são automaticamente disponíveis no escopo global. 
 
 Tuplas = As tuplas são similares a lista porém elas são imutáveis, e portanto não podem receber alterações
 
-*args (Argumentos posicionais): Permite que uma função aceite um número variável de argumentos posicionais. O asterisco * antes de "args" indica que a função pode receber vários argumentos, que serão tratados como uma tupla.
+*args (Argumentos posicionais): Permite que uma função aceite um número variável de argumentos posicionais. O asterisco * antes de "args" indica que a função pode receber vários argumentos, que serão tratados como uma tupla.  
 Ex: def exemplo_args(*args):
     for arg in args:
         print(arg)
 exemplo_args(1, 2, "Python")
 
-**kwargs (Argumentos de palavra-chave): Permite que uma função aceite um número variável de argumentos de palavra-chave (ou seja, argumentos nomeados). O duplo asterisco ** antes de "kwargs" indica que a função pode receber vários argumentos de palavra-chave, que serão tratados como um dicionário.
+**kwargs (Argumentos de palavra-chave): Permite que uma função aceite um número variável de argumentos de palavra-chave (ou seja, argumentos nomeados). O duplo asterisco ** antes de "kwargs" indica que a função pode receber vários argumentos de palavra-chave, que serão tratados como um dicionário.  
 
-Ex: def exemplo_kwargs(**kwargs):
-    for chave, valor in kwargs.items():
-        print(f"{chave}: {valor}")
+Ex:   
+def exemplo_kwargs(**kwargs):  
+    for chave, valor in kwargs.items():  
+        print(f"{chave}: {valor}")  
 
-exemplo_kwargs(nome="Alice", idade=25, cidade="Exemplo")
+exemplo_kwargs(nome="Alice", idade=25, cidade="Exemplo")  
 
 Combinação de ambos: Você pode usar *args e **kwargs na mesma função para aceitar uma combinação de argumentos posicionais e de palavra-chave.
 
-Ex: ef exemplo_combinado(arg1, *args, **kwargs):
-    print(f"Argumento 1: {arg1}")
-    print(f"Outros argumentos posicionais: {args}")
-    print(f"Argumentos de palavra-chave: {kwargs}")
+Ex:    
+def exemplo_combinado(arg1, *args, **kwargs):  
+print(f"Argumento 1: {arg1}")  
+print(f"Outros argumentos posicionais: {args}")  
+print(f"Argumentos de palavra-chave: {kwargs}")  
 
-exemplo_combinado("Python", 2, 3, nome="Alice", idade=25)
+exemplo_combinado("Python", 2, 3, nome="Alice", idade=25)    
 
-Operadores binários
+Operadores binários  
 
-| = union 
-& = intersection 
-- = difference
-^ = symmetric_difference
+'|' = union   
+'&' = intersection   
+'-' = difference  
+'^' = symmetric_difference  
 
-Operadores relacionais
+Operadores relacionais  
 
-<= issubset
->= issuperset 
+'<=' issubset  
+'>=' issuperset   
 
-Operadores de atribuição
+Operadores de atribuição  
 
-|= = update
-&= = intersection_update
--= = difference_update
-^= = symmetric_difference_update
+'|=' = update  
+'&=' = intersection_update  
+'-=' = difference_update  
+'^=' = symmetric_difference_update  
 
