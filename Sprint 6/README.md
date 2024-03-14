@@ -184,6 +184,3 @@ Managed Services for open source
 Amazon Redshift is a fully managed, columnar cloud data warehouse. You can use it to run complex analytical queries on large datasets through massively parallel processing (MPP) technology.
 
 Amazon Redshift is an efficient solution to the challenge of collecting, storing, and analyzing all structured or semi-structured data. You can view historical trends and gain new insights in real time. It also provides the ability to run predictive analytics on your datasets, including third-party datasets you are allowed to access.
-
-# Why Analytics for Games
-
