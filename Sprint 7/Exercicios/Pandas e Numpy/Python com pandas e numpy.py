@@ -6,7 +6,7 @@ def analisar_linha_csv(line):
     aspas = False
     valor_atual = ''
 
-    for caractere in line: # Vai analisar se cada a , está dentro de aspas e se for aspas duplas inverte o valor
+    for caractere in line:
         if caractere == ',' and not aspas:
             valores.append(valor_atual)
             valor_atual = ''
