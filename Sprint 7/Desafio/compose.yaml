@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./dados:/app/dados
+    environment:
+      - AWS_ACCESS_KEY_ID="AKIA47CR3GWEQTGXC2MX"
+      - AWS_SECRET_ACCESS_KEY="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"
+    command: python ingestao_s3.py
