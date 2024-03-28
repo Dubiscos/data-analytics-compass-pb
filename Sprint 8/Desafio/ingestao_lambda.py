@@ -85,14 +85,3 @@ for i in range(num_parts):
     s3.put_object(Bucket=bucket_name, Key=file_path, Body=part_json.encode('utf-8'))
 
     print(f'JSON data has been saved to {file_path} in S3 bucket: {bucket_name}')
-
-
-'''
-for i in range(num_parts):
-    start_idx = i * part_size
-    end_idx = start_idx + part_size
-    part_df = df[start_idx:end_idx]
-
-    file_path = f'movie_data_part_{i+1}.json'
-    part_df.to_json(file_path, orient='records', force_ascii=False, indent=1)
-    print(f'JSON data has been saved to {file_path}')'''
