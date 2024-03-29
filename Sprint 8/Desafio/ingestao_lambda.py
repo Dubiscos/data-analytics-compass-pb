@@ -1,10 +1,9 @@
 import pandas as pd
 import requests
 import boto3
-from IPython.display import display
 import datetime
 
-api_key = "e0fde975e6c6b60fe970a7b06dd80790"
+api_key = "YYYYYYYYY"
 movie_ids = ["1103", "10061", "438631", "693134","180", "78", "335984"]
 
 filmes = []
@@ -61,17 +60,13 @@ for movie_id in movie_ids:
         filmes.append(df)
 
 df = pd.DataFrame(filmes)
-display(df)
 
-s3 = boto3.client('s3',
-                  aws_access_key_id='YOUR_ACCESS_KEY',
-                  aws_secret_access_key='YOUR_SECRET_KEY',
-                  region_name='YOUR_REGION')
+s3 = boto3.client('s3')
 
 num_parts = 7
 part_size = len(df) // num_parts
 
-bucket_name = 'data-lake-do-fulano' 
+bucket_name = 'etl-desafio-eduardo' 
 
 for i in range(num_parts):
     start_idx = i * part_size
@@ -80,7 +75,7 @@ for i in range(num_parts):
 
     part_json = part_df.to_json(orient='records', force_ascii=False, indent=1)
     current_date = datetime.datetime.now().strftime('%Y/%m/%d')
-    file_path = f'raw/tmdb/json/{current_date}/{movie_ids[i]}/movie_data_part_{i+1}.json'
+    file_path = f'RAW/tmdb/json/{current_date}/movie_data_part_{i+1}.json'
 
     s3.put_object(Bucket=bucket_name, Key=file_path, Body=part_json.encode('utf-8'))
 
